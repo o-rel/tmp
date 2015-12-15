@@ -37,11 +37,11 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "doctrine/doctrine-migrations-bundle": "^1.0",
         "friendsofsymfony/user-bundle": "~2.0@dev",
-        "braincrafted/bootstrap-bundle": "~2.0",
-        "twbs/bootstrap": "3.0.*",
+        "braincrafted/bootstrap-bundle": "2.1.*",
+        "twbs/bootstrap": "3.2.*",
         "jquery/jquery":  "1.11.*",
         "symfony/assetic-bundle": "^2.7",
-        "leafo/lessphp": "dev-master"
+        "oyejorge/less.php": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
