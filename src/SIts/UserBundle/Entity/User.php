@@ -3,13 +3,14 @@
 namespace SIts\UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use FOS\UserBundle\FOSUserBundle as BaseUser;
+//use FOS\UserBundle\FOSUserBundle as BaseUser;
+use FOS\UserBundle\Model\User as BaseUser;
 
 /**
  * User
  *
- * @ORM\Table(name="user")
- * @ORM\Entity(repositoryClass="SIts\UserBundle\Repository\UserRepository")
+ * @ORM\Table(name="fos_user")
+ * @ORM\Entity
  */
 class User extends BaseUser
 {
@@ -20,7 +21,7 @@ class User extends BaseUser
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     public function __construct()
     {
