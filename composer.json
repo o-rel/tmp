@@ -10,6 +10,21 @@
             "app/AppKernel.php"
         ]
     },
+    
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "jquery/jquery",
+                "version": "1.9.1",
+                "dist": {
+                    "url": "http://code.jquery.com/jquery-1.9.1.js",
+                    "type": "file"
+                }
+            }
+        }
+    ],
+    
     "require": {
         "php": ">=5.3.9",
         "symfony/symfony": "2.8.*",
@@ -22,7 +37,9 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "doctrine/doctrine-migrations-bundle": "^1.0",
         "friendsofsymfony/user-bundle": "~2.0@dev",
-        "braincrafted/bootstrap-bundle": "dev-master"
+        "braincrafted/bootstrap-bundle": "dev-master",
+        "twitter/bootstrap": "2.3.*",
+        "jquery/jquery": "1.9.*"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",

@@ -71,3 +71,20 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+# Assetic Configuration
+assetic:
+    debug:          %kernel.debug%
+    use_controller: false
+    bundles:        [ ]
+    filters:
+        less:
+            node:       /usr/local/bin/node
+            node_paths: [/usr/local/lib/node_modules]
+            apply_to:   "\.less$"
+        cssrewrite: ~
+
+
+bc_bootstrap:
+    assets_dir:  %kernel.root_dir%/../vendor/twitter/bootstrap
+    jquery_path: %kernel.root_dir%/../vendor/jquery/jquery/jquery-1.9.1.js
