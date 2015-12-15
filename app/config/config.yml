@@ -41,6 +41,8 @@ fos_user:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals: 
+        kernelRootDir: %kernel.root_dir%
 
 # Doctrine Configuration
 doctrine:
@@ -76,7 +78,7 @@ swiftmailer:
 assetic:
     debug:          %kernel.debug%
     use_controller: false
-    bundles:        [ ]
+    bundles:        [ SItsSiteBundle ]
     filters:
         less:
             node:       /usr/local/bin/node

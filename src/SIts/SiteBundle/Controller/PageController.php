@@ -16,6 +16,8 @@ class PageController extends Controller
 	 
 	 public function indexAction()
 	 {
-		 return array();
+		 return array(
+			 //'path' => %kernel.root_dir%/../vendor/twitter/bootstrap/less/bootstrap.less
+		 );
 	 }
 }

@@ -16,9 +16,9 @@
             "type": "package",
             "package": {
                 "name": "jquery/jquery",
-                "version": "1.9.1",
+                "version": "1.11.1",
                 "dist": {
-                    "url": "http://code.jquery.com/jquery-1.9.1.js",
+                    "url": "http://code.jquery.com/jquery-1.11.1.js",
                     "type": "file"
                 }
             }
@@ -37,10 +37,11 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "doctrine/doctrine-migrations-bundle": "^1.0",
         "friendsofsymfony/user-bundle": "~2.0@dev",
-        "braincrafted/bootstrap-bundle": "dev-master",
-        "twitter/bootstrap": "2.3.*",
-        "jquery/jquery": "1.9.*",
-        "symfony/assetic-bundle": "^2.7"
+        "braincrafted/bootstrap-bundle": "~2.0",
+        "twbs/bootstrap": "3.0.*",
+        "jquery/jquery":  "1.11.*",
+        "symfony/assetic-bundle": "^2.7",
+        "leafo/lessphp": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
