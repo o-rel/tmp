@@ -1,7 +1,12 @@
+s_its_site:
+    resource: "@SItsSiteBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 s_its_user:
     resource: "@SItsUserBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /user/
     
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
