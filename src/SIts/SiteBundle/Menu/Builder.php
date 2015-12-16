@@ -3,15 +3,20 @@
 namespace SIts\SiteBundle\Menu;
 
 use Knp\Menu\FactoryInterface;
-use Symfony\Component\DependencyInjection\ContainerAware;
+//use Symfony\Component\DependencyInjection\ContainerAware;
 
-class Builder extends ContainerAware
+class Builder// extends ContainerAware
 {
     public function mainMenu(FactoryInterface $factory, array $options)
     {
         $menu = $factory->createItem('root');
+        $menu->setChildrenAttributes(array('class' => 'sits-main-menu'));
         
         $menu->addChild('Home', array('route' => 'sits_site_page_index'));
+        $menu->addChild('News', array('route' => 'sits_site_page_index'));
+        $menu->addChild('Events', array('route' => 'sits_site_page_index'));
+        $menu->addChild('Newspapers', array('route' => 'sits_site_page_index'));
+        $menu->addChild('Login', array('route' => 'fos_user_security_login'));
         
         return $menu;
     }

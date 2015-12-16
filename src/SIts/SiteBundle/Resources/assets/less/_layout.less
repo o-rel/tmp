@@ -18,12 +18,14 @@ header {
 	.make-lg-column(4);
 }
 
-.test {
-	&:extend(.alert, .alert-success);
+.sits-nav {
+	&:extend(.navbar, .navbar-default, .navbar-right);
 }
 
-.sits-menu {
+.sits-main-menu {
+	&:extend(.nav, .navbar-nav);
 	text-decoration: none;
+	margin-bottom: 0px;
 	li {
 		display: inline;
 		a {

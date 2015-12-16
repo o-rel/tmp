@@ -227,7 +227,8 @@ th {
   select {
     background: #fff !important;
   }
-  .navbar {
+  .navbar,
+  .sits-nav {
     display: none;
   }
   .table td,
@@ -3650,7 +3651,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }
-.nav {
+.nav,
+.sits-main-menu {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
@@ -3842,14 +3844,16 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
-.navbar {
+.navbar,
+.sits-nav {
   position: relative;
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
-  .navbar {
+  .navbar,
+  .sits-nav {
     border-radius: 4px;
   }
 }
@@ -3996,7 +4000,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     display: none;
   }
 }
-.navbar-nav {
+.navbar-nav,
+.sits-main-menu {
   margin: 7.5px -15px;
 }
 .navbar-nav > li > a {
@@ -4027,7 +4032,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 @media (min-width: 768px) {
-  .navbar-nav {
+  .navbar-nav,
+  .sits-main-menu {
     float: left;
     margin: 0;
   }
@@ -4046,7 +4052,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-left {
     float: left !important;
   }
-  .navbar-right {
+  .navbar-right,
+  .sits-nav {
     float: right !important;
   }
 }
@@ -4163,7 +4170,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-right: 0;
   }
 }
-.navbar-default {
+.navbar-default,
+.sits-nav {
   background-color: #f8f8f8;
   border-color: #e7e7e7;
 }
@@ -4680,8 +4688,7 @@ a.thumbnail.active {
   padding: 9px;
   color: #333333;
 }
-.alert,
-.test {
+.alert {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
@@ -4712,8 +4719,7 @@ a.thumbnail.active {
   right: -21px;
   color: inherit;
 }
-.alert-success,
-.test {
+.alert-success {
   background-color: #dff0d8;
   border-color: #d6e9c6;
   color: #3c763d;
@@ -5991,7 +5997,11 @@ button.close {
 .panel-body:before,
 .panel-body:after,
 .modal-footer:before,
-.modal-footer:after {
+.modal-footer:after,
+.sits-nav:before,
+.sits-nav:after,
+.sits-main-menu:before,
+.sits-main-menu:after {
   content: " ";
   display: table;
 }
@@ -6009,7 +6019,9 @@ button.close {
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
-.modal-footer:after {
+.modal-footer:after,
+.sits-nav:after,
+.sits-main-menu:after {
   clear: both;
 }
 .center-block {
@@ -6283,13 +6295,14 @@ header {
     width: 33.33333333%;
   }
 }
-.sits-menu {
+.sits-main-menu {
   text-decoration: none;
+  margin-bottom: 0px;
 }
-.sits-menu li {
+.sits-main-menu li {
   display: inline;
 }
-.sits-menu li a:hover {
+.sits-main-menu li a:hover {
   text-decoration: none;
 }
 .sits-content-container {
