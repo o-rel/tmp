@@ -43,3 +43,24 @@ monolog:
 
 #swiftmailer:
 #    delivery_address: me@example.com
+
+# Assetic Configuration
+assetic:
+    debug:          %kernel.debug%
+    use_controller: false
+    bundles:        [ SItsSiteBundle ]
+    filters:
+        cssrewrite: ~
+        lessphp:
+            file: %kernel.root_dir%/../vendor/oyejorge/less.php/lessc.inc.php
+            apply_to:   "\.less$"
+        less:
+            node:       /usr/local/bin/node
+            node_paths: [/usr/local/lib/node_modules]
+            apply_to:   "\.less$"
+    assets:
+        bootstrap_less:
+            inputs:
+                - %kernel.root_dir%/../vendor/twbs/bootstrap/less/bootstrap.less
+                #- %kernel.root_dir%/../vendor/twbs/bootstrap/less/responsive.less
+            filters: [ less ]

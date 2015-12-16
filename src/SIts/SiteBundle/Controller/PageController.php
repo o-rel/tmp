@@ -9,15 +9,24 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class PageController extends Controller
 {
+	
 	/**
 	 * @Route("/")
 	 * @Template("SItsSiteBundle:Page:index.html.twig")
-	 */
-	 
+	 */ 
 	 public function indexAction()
 	 {
 		 return array(
 			 //'path' => %kernel.root_dir%/../vendor/twitter/bootstrap/less/bootstrap.less
 		 );
+	 }
+	 
+	 /**
+	  * @Route("/maquette")
+	  * @Template("SItsSiteBundle:Page:maquette.html.twig")
+	  */
+	 public function maquetteAction()
+	 {
+		 return array();
 	 }
 }
