@@ -6264,35 +6264,48 @@ body {
 header {
   float: left;
   width: 100%;
+  background-color: #8b0000;
 }
 .placeholder {
   background-color: black;
   color: darkgray;
 }
 .placeholder.banner {
-  width: 100%;
   height: 150px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-menu {
-  background-color: #8b0000;
-  color: #d3d3d3;
-  width: 100%;
-  height: 50px;
-  margin: 0px;
-  text-align: center;
+@media (min-width: 1200px) {
+  .placeholder.banner {
+    float: left;
+    width: 33.33333333%;
+  }
 }
-menu .menu-container {
-  width: 750px;
-  height: 50px;
-}
-menu .menu-container ul a {
+.sits-menu {
   text-decoration: none;
-  color: #d3d3d3;
-  height: 50px;
-  width: 150px;
 }
-menu .menu-container ul a:hover {
+.sits-menu li {
+  display: inline;
+}
+.sits-menu li a:hover {
   text-decoration: none;
-  background-color: #f10000;
-  color: #d3d3d3;
+}
+.sits-content-container {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .sits-content-container {
+    float: left;
+    width: 83.33333333%;
+  }
+}
+@media (min-width: 1200px) {
+  .sits-content-container {
+    margin-left: 8.33333333%;
+  }
 }
