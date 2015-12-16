@@ -41,7 +41,8 @@
         "twbs/bootstrap": "3.2.*",
         "jquery/jquery":  "1.11.*",
         "symfony/assetic-bundle": "^2.7",
-        "oyejorge/less.php": "dev-master"
+        "oyejorge/less.php": "dev-master",
+        "knplabs/knp-menu-bundle": "^2.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
