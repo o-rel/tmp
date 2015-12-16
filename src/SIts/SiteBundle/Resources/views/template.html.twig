@@ -20,12 +20,7 @@
 		<header>
 			<img src="{{ asset('img/banner.jpg') }}" alt="Bannière du CRM d'Aubange" />
 			<div class="sits-menu">
-				<ul>
-					<li><a href="#">Accueil</a></li>
-					<li><a href="#">Albums</a></li>
-					<li><a href="#">Evenements</a></li>
-					<li><a href="#">Revue de presse</a></li>
-				</ul>
+				{{ knp_menu_render('SItsSiteBundle:Builder:mainMenu') }}
 			</div>
 		</header>
 		
