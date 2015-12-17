@@ -1,5 +1,5 @@
 .menu {
-	
+	@extend .blur-content;
 	bottom: 50px;
 	width: 100%;
 	font-size: 1.5em;
@@ -9,17 +9,22 @@
 		text-align: center;
 		li {
 			display: inline;
+			@media (max-width: $small-device-width) { display: block; }
 			list-style: none;
-			padding: 0 20px 0 20px;
+		}
+		.sits-main-menu {
+			padding: 0;
 		}
 	}
 	
 	a {
 		text-decoration: none;
 		padding: 19px 0 19px 0;
+		margin: 0 20px 0 20px;
+		@media (max-width: $small-device-width) { padding: 10px 0 19px 0; }
+		color: $menu-a-color;
 		&:hover {
 			color: $menu-hover-color;
-			border-top: 5px solid $menu-hover-color;
 		}
 	}
 }

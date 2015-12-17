@@ -7116,9 +7116,32 @@ a.bg-danger:focus, a.bg-danger:hover {
  *            IMPORTING VARIABLES: 		 		*
  *												*
  ************************************************/
-/* line 1, ../../../src/SIts/SiteBundle/Resources/assets/scss/layout.scss */
-header {
-  background-color: darkred;
+/* line 1, ../../../src/SIts/SiteBundle/Resources/assets/scss/_mixins.scss */
+.blur-content, .menu {
+  position: absolute;
+}
+/* line 4, ../../../src/SIts/SiteBundle/Resources/assets/scss/_mixins.scss */
+.blur-content:before, .menu:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  background: url(../img/index-image.jpg) -260px -200px;
+  z-index: -1;
+}
+/* line 17, ../../../src/SIts/SiteBundle/Resources/assets/scss/_mixins.scss */
+.blur-content:after, .menu:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
 }
 
 /* line 1, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
@@ -7136,15 +7159,31 @@ header {
 .menu .sits-menu li {
   display: inline;
   list-style: none;
-  padding: 0 20px 0 20px;
 }
-/* line 17, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+@media (max-width: 767px) {
+  /* line 10, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+  .menu .sits-menu li {
+    display: block;
+  }
+}
+/* line 15, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+.menu .sits-menu .sits-main-menu {
+  padding: 0;
+}
+/* line 20, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
 .menu a {
   text-decoration: none;
   padding: 19px 0 19px 0;
+  margin: 0 20px 0 20px;
+  color: darkgrey;
 }
-/* line 20, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+@media (max-width: 767px) {
+  /* line 20, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+  .menu a {
+    padding: 10px 0 19px 0;
+  }
+}
+/* line 26, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
 .menu a:hover {
   color: darkred;
-  border-top: 5px solid darkred;
 }

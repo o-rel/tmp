@@ -1,0 +1,27 @@
+.blur-content {
+	position: absolute;
+	
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		//width: 100%;
+		height: 100%;
+		-webkit-filter: blur(5px);
+		filter: blur(5px);
+		background: url(../img/index-image.jpg) -260px -200px;
+		z-index: -1;
+	}
+	
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.8);
+		z-index: -1;
+	}
+}
