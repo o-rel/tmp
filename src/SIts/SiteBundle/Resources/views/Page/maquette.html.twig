@@ -1,5 +1,8 @@
 {% extends "SItsSiteBundle::template.html.twig" %}
 
 {% block content%}
-	<div class="test">premier test</div>
+	<div class="test-nesting">
+		<div class="test">premier test</div>
+		<div class="test-comment">COMMENTAIRES</div>
+	</div>
 {% endblock %}

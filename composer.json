@@ -37,11 +37,9 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "doctrine/doctrine-migrations-bundle": "^1.0",
         "friendsofsymfony/user-bundle": "~2.0@dev",
-        "braincrafted/bootstrap-bundle": "2.1.*",
-        "twbs/bootstrap": "3.2.*",
+        "twbs/bootstrap": "4.0.0-alpha.2",
         "jquery/jquery":  "1.11.*",
         "symfony/assetic-bundle": "^2.7",
-        "oyejorge/less.php": "dev-master",
         "knplabs/knp-menu-bundle": "^2.0"
     },
     "require-dev": {

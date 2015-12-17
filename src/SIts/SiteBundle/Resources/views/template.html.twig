@@ -6,8 +6,8 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		
-		{% stylesheets output='css/styles.css'
-			'@SItsSiteBundle/Resources/assets/*'
+		{% stylesheets filter="compass"
+			'@SItsSiteBundle/Resources/assets/scss/styles.scss'
 		%}
 		
 			<link rel="stylesheet" href="{{ asset_url }}" />
