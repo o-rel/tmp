@@ -1,9 +1,9 @@
 /* line 1, ../../../src/SIts/SiteBundle/Resources/assets/scss/_mixins.scss */
-.blur-content, .menu, .sits-title {
+.blur-content, .menu {
   position: absolute;
 }
 /* line 4, ../../../src/SIts/SiteBundle/Resources/assets/scss/_mixins.scss */
-.blur-content:before, .menu:before, .sits-title:before {
+.blur-content:before, .menu:before {
   content: '';
   position: absolute;
   top: 0;
@@ -15,7 +15,7 @@
   z-index: -1;
 }
 /* line 17, ../../../src/SIts/SiteBundle/Resources/assets/scss/_mixins.scss */
-.blur-content:after, .menu:after, .sits-title:after {
+.blur-content:after, .menu:after {
   content: '';
   position: absolute;
   top: 0;
@@ -32,6 +32,7 @@
   width: 100%;
   font-size: 1.5em;
   text-transform: uppercase;
+  z-index: 1;
 }
 /* line 8, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
 .menu .sits-menu {
@@ -68,45 +69,4 @@
 /* line 26, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
 .menu a:hover {
   color: darkred;
-}
-
-/* line 6, assetic_compassRbMzm9.scss */
-html {
-  margin: auto;
-  padding: 0px;
-  background-image: url(../img/index-image.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-/* line 16, assetic_compassRbMzm9.scss */
-body {
-  margin: 0px;
-  font-family: 'Elliot', serif;
-}
-
-/* line 21, assetic_compassRbMzm9.scss */
-.sits-title {
-  margin-top: 100px;
-  padding: 1em 0 1em 0;
-  width: 100%;
-  color: darkgrey;
-  font-size: 2.5em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-/* line 34, assetic_compassRbMzm9.scss */
-.menu li {
-  margin-top: 20px;
-}
-/* line 37, assetic_compassRbMzm9.scss */
-.menu a {
-  color: darkgrey;
-}
-/* line 39, assetic_compassRbMzm9.scss */
-.menu a:hover {
-  border-top: 5px solid darkred;
 }

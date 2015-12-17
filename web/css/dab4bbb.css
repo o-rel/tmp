@@ -7117,11 +7117,11 @@ a.bg-danger:focus, a.bg-danger:hover {
  *												*
  ************************************************/
 /* line 1, ../../../src/SIts/SiteBundle/Resources/assets/scss/_mixins.scss */
-.blur-content, .menu {
+.blur-content, .menu, .sits-title {
   position: absolute;
 }
 /* line 4, ../../../src/SIts/SiteBundle/Resources/assets/scss/_mixins.scss */
-.blur-content:before, .menu:before {
+.blur-content:before, .menu:before, .sits-title:before {
   content: '';
   position: absolute;
   top: 0;
@@ -7133,7 +7133,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   z-index: -1;
 }
 /* line 17, ../../../src/SIts/SiteBundle/Resources/assets/scss/_mixins.scss */
-.blur-content:after, .menu:after {
+.blur-content:after, .menu:after, .sits-title:after {
   content: '';
   position: absolute;
   top: 0;
@@ -7150,6 +7150,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   width: 100%;
   font-size: 1.5em;
   text-transform: uppercase;
+  z-index: 1;
 }
 /* line 8, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
 .menu .sits-menu {
@@ -7164,6 +7165,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   /* line 10, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
   .menu .sits-menu li {
     display: block;
+    margin-top: 20px;
   }
 }
 /* line 15, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
@@ -7186,4 +7188,36 @@ a.bg-danger:focus, a.bg-danger:hover {
 /* line 26, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
 .menu a:hover {
   color: darkred;
+  border-top: 5px solid darkred;
+}
+
+/* line 1, ../../../src/SIts/SiteBundle/Resources/assets/scss/layout.scss */
+body {
+  margin: 0px;
+  font-family: 'Elliot', serif;
+}
+
+/* line 6, ../../../src/SIts/SiteBundle/Resources/assets/scss/layout.scss */
+.banner-content {
+  padding: 0px;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/index-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* line 19, ../../../src/SIts/SiteBundle/Resources/assets/scss/layout.scss */
+.sits-title {
+  margin-top: 100px;
+  padding: 1em 0 1em 0;
+  width: 100%;
+  color: darkgrey;
+  font-size: 2.5em;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
 }

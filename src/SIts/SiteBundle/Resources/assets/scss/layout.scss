@@ -1,1 +1,29 @@
+body {
+	margin: 0px;
+	font-family: 'Elliot', serif;
+}
 
+.banner-content {
+	//margin: auto;
+	padding: 0px;
+	width: 100%;
+	height: 100vh;
+	background-image: url(../img/index-image.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: -1;
+}
+
+.sits-title {
+	@extend .blur-content;
+	margin-top: 100px;
+	padding: 1em 0 1em 0;
+	width: 100%;
+	color: $index-color;
+	font-size: 2.5em;
+	text-align: center;
+	text-transform: uppercase;
+	z-index: 1;
+}

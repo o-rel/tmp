@@ -1,29 +1,9 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no{#, target-densitydpi=device-dpi#}" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-		
-		{% stylesheets filter="compass"
-			'@SItsSiteBundle/Resources/assets/scss/index.scss'
-		%}
-		
-			<link rel="stylesheet" href="{{ asset_url }}" />
-		
-		{% endstylesheets %}
-	</head>
-	
-	<body>
-		<div class="sits-title">
-			Cercle Royal Musical d'Aubange
-		</div>
-	
-		<nav class="menu">
-			<div class="sits-menu">
-				{{ knp_menu_render('SItsSiteBundle:Builder:mainMenu') }}
-			</div>
-		</nav>
-	</body>
-</html>
+{% extends "SItsSiteBundle::template.html.twig" %}
+
+{% block content%}
+	<div class="test-nesting">
+		<div class="test">premier test</div>
+		<div class="test-comment">COMMENTAIRES</div>
+		<h1>Titre H1 </h1>
+	</div>
+{% endblock %}
