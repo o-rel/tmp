@@ -7150,29 +7150,33 @@ a.bg-danger:focus, a.bg-danger:hover {
   width: 100%;
   font-size: 1.5em;
   text-transform: uppercase;
-  z-index: 1;
+  z-index: +2;
 }
-/* line 8, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+/* line 10, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
 .menu .sits-menu {
   text-align: center;
 }
-/* line 10, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
-.menu .sits-menu li {
+/* line 12, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+.menu .sits-menu ul {
+  margin: 19px 0 19px 0;
+}
+/* line 14, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+.menu .sits-menu ul li {
   display: inline;
   list-style: none;
 }
 @media (max-width: 767px) {
-  /* line 10, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
-  .menu .sits-menu li {
+  /* line 14, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+  .menu .sits-menu ul li {
     display: block;
     margin-top: 20px;
   }
 }
-/* line 15, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+/* line 20, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
 .menu .sits-menu .sits-main-menu {
   padding: 0;
 }
-/* line 20, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+/* line 25, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
 .menu a {
   text-decoration: none;
   padding: 19px 0 19px 0;
@@ -7180,12 +7184,12 @@ a.bg-danger:focus, a.bg-danger:hover {
   color: darkgrey;
 }
 @media (max-width: 767px) {
-  /* line 20, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+  /* line 25, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
   .menu a {
     padding: 10px 0 19px 0;
   }
 }
-/* line 26, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+/* line 31, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
 .menu a:hover {
   color: darkred;
   border-top: 5px solid darkred;
@@ -7207,7 +7211,7 @@ body {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  z-index: -1;
+  z-index: 100;
 }
 
 /* line 19, ../../../src/SIts/SiteBundle/Resources/assets/scss/layout.scss */
