@@ -1,0 +1,64 @@
+//@import "../../../../../../vendor/twbs/bootstrap/scss/bootstrap";
+@import "variables";
+@import "menu";
+
+html {
+	margin: auto;
+	padding: 0px;
+	background-image: url(../img/index-image.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+body {
+	margin: 0px;
+	font-family: 'Elliot', serif;
+}
+
+.blur-content {
+	position: absolute;
+	
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		//width: 100%;
+		height: 100%;
+		-webkit-filter: blur(5px);
+		filter: blur(5px);
+		background: url(../img/index-image.jpg) -260px -200px;
+		z-index: -1;
+	}
+	
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.8);
+		z-index: -1;
+	}
+}
+
+.sits-title {
+	@extend .blur-content;
+	margin-top: 100px;
+	padding: 1em 0 1em 0;
+	width: 100%;
+	color: $index-color;
+	font-size: 2.5em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.menu {
+	@extend .blur-content;
+	a {
+		color: $index-color;
+	}
+}

@@ -1,0 +1,88 @@
+/* line 1, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+.menu {
+  bottom: 50px;
+  width: 100%;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+/* line 8, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+.menu .sits-menu {
+  text-align: center;
+}
+/* line 10, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+.menu .sits-menu li {
+  display: inline;
+  list-style: none;
+  padding: 0 20px 0 20px;
+}
+/* line 17, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+.menu a {
+  text-decoration: none;
+  padding: 19px 0 19px 0;
+}
+/* line 20, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+.menu a:hover {
+  color: darkred;
+  border-top: 5px solid darkred;
+}
+
+/* line 5, assetic_compasseBlfnQ.scss */
+html {
+  margin: auto;
+  padding: 0px;
+  background-image: url(../img/index-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* line 15, assetic_compasseBlfnQ.scss */
+body {
+  margin: 0px;
+  font-family: 'Elliot', serif;
+}
+
+/* line 20, assetic_compasseBlfnQ.scss */
+.blur-content, .sits-title, .menu {
+  position: absolute;
+}
+/* line 23, assetic_compasseBlfnQ.scss */
+.blur-content:before, .sits-title:before, .menu:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  background: url(../img/index-image.jpg) -260px -200px;
+  z-index: -1;
+}
+/* line 36, assetic_compasseBlfnQ.scss */
+.blur-content:after, .sits-title:after, .menu:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+/* line 48, assetic_compasseBlfnQ.scss */
+.sits-title {
+  margin-top: 100px;
+  padding: 1em 0 1em 0;
+  width: 100%;
+  color: darkgrey;
+  font-size: 2.5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 61, assetic_compasseBlfnQ.scss */
+.menu a {
+  color: darkgrey;
+}

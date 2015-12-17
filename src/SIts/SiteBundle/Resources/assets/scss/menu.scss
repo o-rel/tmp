@@ -1,0 +1,25 @@
+.menu {
+	
+	bottom: 50px;
+	width: 100%;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	
+	.sits-menu {
+		text-align: center;
+		li {
+			display: inline;
+			list-style: none;
+			padding: 0 20px 0 20px;
+		}
+	}
+	
+	a {
+		text-decoration: none;
+		padding: 19px 0 19px 0;
+		&:hover {
+			color: $menu-hover-color;
+			border-top: 5px solid $menu-hover-color;
+		}
+	}
+}

@@ -1,3 +1,8 @@
+/************************************************
+ *												*
+ *       IMPORTING BOOTSTRAP FOR EXTENDS 		*
+ *												*
+ ************************************************/
 /*!
  * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -7104,4 +7109,42 @@ a.bg-danger:focus, a.bg-danger:hover {
   .hidden-print {
     display: none !important;
   }
+}
+
+/************************************************
+ *												*
+ *            IMPORTING VARIABLES: 		 		*
+ *												*
+ ************************************************/
+/* line 1, ../../../src/SIts/SiteBundle/Resources/assets/scss/layout.scss */
+header {
+  background-color: darkred;
+}
+
+/* line 1, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+.menu {
+  bottom: 50px;
+  width: 100%;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+/* line 8, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+.menu .sits-menu {
+  text-align: center;
+}
+/* line 10, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+.menu .sits-menu li {
+  display: inline;
+  list-style: none;
+  padding: 0 20px 0 20px;
+}
+/* line 17, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+.menu a {
+  text-decoration: none;
+  padding: 19px 0 19px 0;
+}
+/* line 20, ../../../src/SIts/SiteBundle/Resources/assets/scss/menu.scss */
+.menu a:hover {
+  color: darkred;
+  border-top: 5px solid darkred;
 }
