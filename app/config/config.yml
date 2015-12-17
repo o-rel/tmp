@@ -84,10 +84,3 @@ assetic:
     filters:
         cssrewrite: ~
         compass: ~
-#        less: ~
-    assets:
-        bootstrap_css:
-            inputs: 
-                - %kernel.root_dir%/../vendor/twbs/bootstrap/scss/bootstrap.scss
-            filters: 
-                - compass
