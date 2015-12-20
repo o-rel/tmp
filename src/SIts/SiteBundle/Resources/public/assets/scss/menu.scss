@@ -1,0 +1,47 @@
+.menu {
+	@extend .blur-content;
+	bottom: 50px;
+	width: 100%;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	z-index: +2;
+	.sits-menu {
+		text-align: center;
+		ul {
+			margin: 19px 0 19px 0;
+			li {
+				display: inline;
+				@media (max-width: $small-device-width) { display: block; margin-top: 20px;}
+				list-style: none;
+			}
+		}
+		.sits-main-menu {
+			padding: 0;
+		}
+	}
+	
+	a {
+		text-decoration: none;
+		padding: 19px 0 19px 0;
+		margin: 0 20px 0 20px;
+		@media (max-width: $small-device-width) { padding: 10px 0 19px 0; }
+		color: $menu-link-color;
+		&:hover {
+			color: $menu-link-hover-color;
+			border-top: 5px solid $menu-link-hover-color;
+		}
+	}
+}
+
+.menu.cloned {
+	@extend .banner-image;
+	position: fixed;
+	top: 0;
+	bottom: auto;
+	margin-top: 0;
+	z-index: 500;
+	a:hover {
+		border-top: none;
+		border-bottom: 5px solid $menu-link-hover-color;
+	}
+}

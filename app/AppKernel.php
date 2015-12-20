@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Sp\BowerBundle\SpBowerBundle(),
             new SIts\UserBundle\SItsUserBundle(),
             new SIts\SiteBundle\SItsSiteBundle(),
         );

@@ -6,8 +6,9 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		
-		{% stylesheets filter="compass"
-			'@SItsSiteBundle/Resources/assets/styles.scss'
+		{% stylesheets 
+			'@bootstrap_css_rewrite'
+			'@styles_css'
 		%}
 		
 			<link rel="stylesheet" href="{{ asset_url }}" />
@@ -28,7 +29,13 @@
 			</nav>
 		</div>
 		
-		
+		{% javascripts
+			'@jquery_js'
+			'@sits_js' 
+		%}
+			
+			<script src="{{ asset_url }}"></script>
+		{% endjavascripts %}
 		
 		{% block content %}{% endblock %}
 	</body>

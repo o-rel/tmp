@@ -7,8 +7,8 @@ imports:
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
-    assetic.filter.compass.images_dir: %kernel.root_dir%/../web/img
-    assetic.filter.compass.http_path: /img
+#    assetic.filter.compass.images_dir: %kernel.root_dir%/../web/img
+#    assetic.filter.compass.http_path: /img
 
 framework:
     #esi:             ~
@@ -75,12 +75,32 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+    
+# SpBower Configuration
+sp_bower:
+    bundles:
+        SItsSiteBundle: ~
+    assetic:
+        nest_dependencies: false
 
 # Assetic Configuration
 assetic:
-    debug:          %kernel.debug%
-    use_controller: false
-    bundles:        [ SItsSiteBundle ]
+    debug:
+        "%kernel.debug%"
     filters:
         cssrewrite: ~
-        compass: ~
+        sass: ~
+    assets:
+        bootstrap_css_rewrite:
+            inputs:
+                - "bundles/sitssite/components/bootstrap/dist/css/bootstrap.css"
+            filters:
+                - cssrewrite
+        styles_css:
+            inputs:
+                - "bundles/sitssite/assets/scss/styles.scss"
+            filters:
+                - sass
+        sits_js:
+            inputs:
+                - "bundles/sitssite/assets/js/*"
