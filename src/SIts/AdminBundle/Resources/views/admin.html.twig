@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no{#, target-densitydpi=device-dpi#}" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		
+		{% stylesheets 
+            '@admin_bootstrap'
+            '@startbootstrap_sb_admin_2_css'
+            '@morrisjs_css'
+            '@bootstrap_social_css'
+            '@datatables_css'
+            '@metisMenu_css'
+            '@font_awesome_css'
+            '@admin_css'
+        %}
+		
+			<link rel="stylesheet" href="{{ asset_url }}" />
+		
+		{% endstylesheets %}
+	</head>
+	
+	<body>
+		
+		{% include 'SItsAdminBundle::menu.html.twig' %}
+		
+		<div id="page-wrapper">
+            {% block content%}{% endblock %}
+		</div>
+        
+        
+        {% javascripts
+            '@jquery_js'
+            '@tether_js'
+            '@startbootstrap_sb_admin_2_js'
+            '@morrisjs_js'
+            '@datatables_js'
+            '@datatables_responsive_js'
+            '@flot_js'
+            '@metisMenu_js'
+            '@flot_tooltip_js'
+            '@holderjs_js'
+            '@bootstrap_js'
+		%}
+			
+			<script src="{{ asset_url }}"></script>
+		{% endjavascripts %}
+
+	</body>
+</html>

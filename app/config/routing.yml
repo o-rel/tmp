@@ -1,3 +1,13 @@
+s_its_admin:
+    resource: "@SItsAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /admin/
+
+s_its_news:
+    resource: "@SItsNewsBundle/Controller/"
+    type:     annotation
+    prefix:   /admin/news
+
 s_its_site:
     resource: "@SItsSiteBundle/Controller/"
     type:     annotation
@@ -6,7 +16,7 @@ s_its_site:
 s_its_user:
     resource: "@SItsUserBundle/Controller/"
     type:     annotation
-    prefix:   /user/
+    prefix:   /admin/user/
     
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"

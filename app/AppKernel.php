@@ -22,6 +22,8 @@ class AppKernel extends Kernel
             new Sp\BowerBundle\SpBowerBundle(),
             new SIts\UserBundle\SItsUserBundle(),
             new SIts\SiteBundle\SItsSiteBundle(),
+            new SIts\NewsBundle\SItsNewsBundle(),
+            new SIts\AdminBundle\SItsAdminBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

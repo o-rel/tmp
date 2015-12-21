@@ -1,0 +1,23 @@
+{% extends "SItsAdminBundle::admin.html.twig" %}
+
+{% block title %}{% trans %}Nouvel utilisateur{% endtrans %}{{parent()}}{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Ajouter un utilisateur</h1>
+        </div>
+    </div>
+
+    <div class="row">	
+        {{ form(form, { 'style': 'horizontal', 'label_col': 2, 'widget_col': 10 }) }}
+    </div>	
+
+    <ul class="record_actions">
+        <li>
+            <a class="btn btn-default" href="{{ path('admin_user') }}">
+                {% trans %}Retour à la liste{% endtrans %}
+            </a>
+        </li>
+    </ul>
+{% endblock %}

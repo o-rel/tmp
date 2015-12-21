@@ -3,7 +3,8 @@
  *       IMPORTING BOOTSTRAP FOR EXTENDS 		*
  *												*
  ************************************************/
-//@import "../../../../../../vendor/twbs/bootstrap/scss/bootstrap";
+@import "../../components/bootstrap/scss/bootstrap.scss";
+//@import "../../components/bootstrap/scss/_mixins.scss";
 
 /************************************************
  *												*
@@ -11,7 +12,7 @@
  *												*
  ************************************************/
 @import "_variables";
-@import "_mixins";
+//@import "_mixins";
 
 @import "menu";
 @import "layout";

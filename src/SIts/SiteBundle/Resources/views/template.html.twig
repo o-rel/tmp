@@ -6,8 +6,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		
-		{% stylesheets 
-			'@bootstrap_css_rewrite'
+		{% stylesheets filter="sass"
 			'@styles_css'
 		%}
 		
@@ -29,6 +28,10 @@
 			</nav>
 		</div>
 		
+		<div class="content-wrapper">
+			{% block content %}{% endblock %}
+		</div>
+		
 		{% javascripts
 			'@jquery_js'
 			'@sits_js' 
@@ -36,7 +39,5 @@
 			
 			<script src="{{ asset_url }}"></script>
 		{% endjavascripts %}
-		
-		{% block content %}{% endblock %}
 	</body>
 </html>

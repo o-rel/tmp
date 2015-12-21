@@ -32,6 +32,8 @@ framework:
         handler_id:  ~
     fragments:       ~
     http_method_override: true
+    session:
+        gc_probability: 0
     
 # FOSUser Configuration        
 fos_user:
@@ -80,6 +82,7 @@ swiftmailer:
 sp_bower:
     bundles:
         SItsSiteBundle: ~
+        SItsAdminBundle: ~
     assetic:
         nest_dependencies: false
 
@@ -90,17 +93,46 @@ assetic:
     filters:
         cssrewrite: ~
         sass: ~
+        less: ~
     assets:
         bootstrap_css_rewrite:
             inputs:
-                - "bundles/sitssite/components/bootstrap/dist/css/bootstrap.css"
-            filters:
-                - cssrewrite
+                - "bundles/sitssite/components/bootstrap/scss/bootstrap.scss"
         styles_css:
             inputs:
                 - "bundles/sitssite/assets/scss/styles.scss"
-            filters:
-                - sass
         sits_js:
             inputs:
                 - "bundles/sitssite/assets/js/*"
+        
+        admin_bootstrap:
+            inputs:
+                - "bundles/sitsadmin/components/bootstrap/dist/css/bootstrap.css"
+#                - "bundles/sitsadmin/components/bootstrap/dist/css/bootstrap-social.css"
+#                - "bundles/sitsadmin/components/datatables/media/css/dataTables.bootstrap.min.css"
+#                - "bundles/sitsadmin/components/startbootstrap-sb-admin-2/dist/css/sb-admin-2.css"
+
+        admin_css:
+            inputs:
+                - "bundles/sitsadmin/assets/admin.scss"
+            filters:
+                - sass
+                
+#        admin_datatables_css:
+#            inputs:
+#                - "bundles/sitsadmin/components/datatables/media/css/dataTables.bootstrap.min.css"
+#                - "bundles/sitsadmin/components/startbootstrap-sb-admin-2/dist/css/sb-admin-2.css"
+                
+#        admin_datatables_js:
+#            inputs:
+#                - "bundles/sitsadmin/components/datatables/media/js/dataTables.bootstrap.min.js"
+                
+#        admin_other_css:
+#            inputs:
+#                - "bundles/sitsadmin/components/font-awesome/css/font-awesome.min.css"
+#        admin_other_2_css:
+#            inputs:
+#                - "bundles/sitsadmin/components/metisMenu/dist/metisMenu.min.css"
+#        admin_other_3_css:
+#            inputs:
+#                - "bundles/sitsadmin/mocha/mocha.css"

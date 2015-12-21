@@ -1,0 +1,47 @@
+{% extends "SItsAdminBundle::admin.html.twig" %}
+
+{% block title %}{% trans %}Voir l'utilisateur{% endtrans %}{{parent()}}{% endblock %}
+
+{% block content %}
+
+<div class="page">
+    <h1>{% trans %}Utilisateur{% endtrans %}</h1>
+    <div class="table-responsive">
+        <table class="table record_properties">
+            <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ entity.id }}</td>
+                </tr>
+                <tr>
+                    <th>{% trans %}Nom d'utilisateur{% endtrans %}</th>
+                    <td>{{ entity.username }}</td>
+                </tr>
+                <tr>
+                    <th>{% trans %}Roles{% endtrans %}</th>
+                    <td>
+                    {% for role in entity.roles %}
+                    {{ role |replace({ ('ROLE_'): '' })}}{% if not loop.last %},{% endif %}
+                    {% endfor %}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="button-edit">
+        <a class="btn btn-success" href="{{ path('admin_user_edit', { 'id': entity.id }) }}">
+            {% trans %}Editer{% endtrans %}
+        </a>
+    </p>
+
+    <ul class="record_actions margin">
+        <li>
+            <a class="btn btn-default" href="{{ path('admin_user') }}">
+                {% trans %}Retour à la liste{% endtrans %}
+            </a>
+        </li>
+        
+        <li>{{ form(delete_form) }}</li>
+    </ul>
+</div>
+{% endblock %}

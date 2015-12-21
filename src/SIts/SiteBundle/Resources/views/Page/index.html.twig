@@ -1,62 +1,65 @@
 {% extends "SItsSiteBundle::template.html.twig" %}
 
 {% block content%}
-	<div class="test-nesting">
-		<div class="test">premier test</div>
-		<div class="test-comment">COMMENTAIRES</div>
-		<h1>Titre H1 </h1>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
-		<p>toto</p>
+	<div class="home-part" id="home-message">
+		<div class="home-message">
+			<h1 class="home-title">Mot du président</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p>
+				Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+			</p>
+		</div>
+	</div>
+	<div class="home-part" id="home-news">
+		<div class="wrapper">
+			<article>
+				<h1>Titre news</h1>
+				<div class="home-date">20-12-2015</div>
+				<div class="news-image">
+					<img src="{{ asset('img/img-placeholder.jpg') }}" />
+				</div>
+				<div class="news-content">
+					<p>
+						Le contenu de la news (on fait un peu long parce que sinon on voit pas grand chose pour la mise en page et c'est chiant ... enfin pas top quoi
+					</p>	
+				</div>
+			</article>
+			<article>
+				<h1>Une deuxième news</h1>
+				<div class="home-date">19-12-2015</div>
+				<div class="news-image img-responsive">
+					<img src="{{ asset('img/img-placeholder.jpg') }}" />
+				</div>
+				<div class="news-content">
+					<p>
+						Le contenu de la deuxième news
+					</p>
+				</div>
+			</article>
+		</div>
+	</div>
+	<div class="home-part" id="home-events">
+		<div class="wrapper">
+			<article>
+				<h1>Titre evenement</h1>
+				<div class="event-date">20-12-2015</div>
+				<div class="event-content">
+					<p>
+						Le contenu de l'évènement
+					</p>
+				</div>
+			</article>
+			<article>
+				<h1>Titre deuxième evenement</h1>
+				<div class="event-date">9-12-2015</div>
+				<div class="event-content">
+					<p>
+						Le contenu du deuxième évènement
+					</p>
+				</div>
+			</article>
+		</div>
 	</div>
 {% endblock %}

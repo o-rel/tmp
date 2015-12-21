@@ -1,6 +1,36 @@
+.blur-content {
+	position: absolute;
+	
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		//width: 100%;
+		height: 100%;
+		-webkit-filter: blur(5px);
+		filter: blur(5px);
+		background-image: $banner-image-url;
+		background-position: -260px -200px;
+		z-index: -1;
+	}
+	
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.8);
+		z-index: -1;
+	}
+}
+
 body {
 	margin: 0px;
 	font-family: 'Elliot', serif;
+	background-color: $index-bg-color;
 }
 
 .banner-image {
@@ -24,9 +54,54 @@ body {
 	margin-top: 100px;
 	padding: 1em 0 1em 0;
 	width: 100%;
-	color: $index-color;
+	color: $menu-link-color;
 	font-size: 2.5em;
 	text-align: center;
 	text-transform: uppercase;
 	z-index: 1;
+}
+
+.content-wrapper {
+	@include make-col-span(12);
+	text-align: center;
+	.home-part {
+		width: 100%;
+		padding: 20px 0 20px 0;
+		.home-message {
+			@include make-col-span(4);
+			@include make-col-offset(4);
+		}
+		.wrapper {
+			@include make-col-span(8);
+			@include make-col-offset(2);
+			article {
+				@include make-col-span(4);
+				float: left;
+			}
+		}
+		.wrapper:after {
+			content: " ";
+			display: block; 
+			height: 0; 
+			clear: both;
+		}
+		.news-image {
+			@include make-col-span(10);
+			@include make-col-offset(1);
+			img {
+				@extend .img-fluid;
+			}
+		}
+	}
+	.home-part:nth-child(even) {
+		background-color: $index-bg-color-2;
+		color: $index-color-2;	
+	}
+}
+
+.test {
+	@extend .alert;
+	@extend .alert-success;
+	@include make-col-span(10);
+	@include make-col-offset(1);
 }

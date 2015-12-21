@@ -1,0 +1,4 @@
+services:
+#    s_its_admin.example:
+#        class: SIts\AdminBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

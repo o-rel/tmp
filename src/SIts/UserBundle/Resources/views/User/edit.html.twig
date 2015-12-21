@@ -1,0 +1,24 @@
+{% extends "SItsAdminBundle::admin.html.twig" %}
+
+{% block title %}{% trans %}Editer l'utilisateur{% endtrans %}{{parent()}}{% endblock %}
+
+{% block content %}
+<div class="page">
+    <h1>{% trans %}Editer l'utilisateur{% endtrans %}</h1>
+    <div class="admin-edit">
+        {{ form_start(edit_form, { 'style': 'horizontal', 'label_col': 2, 'widget_col': 10}) }}
+        {{ form_errors(edit_form) }}
+        
+        {{ form_end(edit_form) }}
+    </div>
+
+    <ul class="record_actions">
+        <li>
+            <a class="btn btn-default" href="{{ path('admin_user') }}">
+                {% trans %}Retour à la liste{% endtrans %}
+            </a>
+        </li>
+        <li>{{ form(delete_form) }}</li>
+    </ul>
+</div>
+{% endblock %}
