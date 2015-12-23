@@ -37,7 +37,6 @@
             '@startbootstrap_sb_admin_2_js'
             '@morrisjs_js'
             '@datatables_js'
-            '@datatables_responsive_js'
             '@flot_js'
             '@metisMenu_js'
             '@flot_tooltip_js'
@@ -48,5 +47,11 @@
 			<script src="{{ asset_url }}"></script>
 		{% endjavascripts %}
 
+
+        <script>
+            $(document).ready(function () {
+                {% block documentReady %}{% endblock %}
+            });
+        </script>
 	</body>
 </html>
